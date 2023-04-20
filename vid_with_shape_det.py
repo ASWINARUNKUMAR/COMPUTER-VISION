@@ -3,7 +3,7 @@ import imutils
   
   
 # define a video capture object
-vid = cv2.VideoCapture(r"C:\Users\Home\Downloads\test2.mp4")
+vid = cv2.VideoCapture(r"C:\Users\Home\Downloads\test2.mp4") #change file path here or type 0 for webcam
 
 # Check if camera opened successfully
 if (vid.isOpened()== False): 
