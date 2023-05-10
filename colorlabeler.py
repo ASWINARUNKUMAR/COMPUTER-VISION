@@ -10,7 +10,8 @@ class ColorLabeler:
    		colors = OrderedDict({
    			"red": (255, 0, 0),
    			"green": (0, 255, 0),
-   			"blue": (0, 0, 255)})
+   			"blue": (0, 0, 255),
+            "yellow": (225, 225, 0)})
    		# allocate memory for the L*a*b* image, then initialize
    		# the color names list
    		self.lab = np.zeros((len(colors), 1, 3), dtype="uint8")
@@ -20,8 +21,7 @@ class ColorLabeler:
    			# update the L*a*b* array and the color names list
    			self.lab[i] = rgb
    			self.colorNames.append(name)
-   		# convert the L*a*b* array from the RGB color space
-   		# to L*a*b*
+   		# convert to L*a*b* array from the RGB color space
    		self.lab = cv2.cvtColor(self.lab, cv2.COLOR_RGB2LAB)
         
     def label(self, image, c):
